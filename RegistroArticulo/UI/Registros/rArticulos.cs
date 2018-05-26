@@ -19,10 +19,19 @@ namespace RegistroArticulo.UI.Registros
 
         public bool validar()
         {
+            
             if(string.IsNullOrEmpty(DescripcionrichTextBox.Text))
             {
-                errorProvider1.SetError(DescripcionrichTextBox, "llenar");
+                errorProvider1.SetError(DescripcionrichTextBox, "llenar Descripcion");
+                
                 return false;
+            }
+
+            if (string.IsNullOrEmpty(PrecionumericUpDown.ToString()))
+            {
+                errorProvider1.SetError(PrecionumericUpDown, "No debes dejar el precio vacio");
+                return false;
+
             }
             return true;
         }
@@ -33,9 +42,9 @@ namespace RegistroArticulo.UI.Registros
             Articulo.ArticuloID = Convert.ToInt32(ArticuloIDnumericUpDown.Value);
             Articulo.FechaVencimiento = FechaVencimientodateTimePicker.Value;
             Articulo.Descripcion = DescripcionrichTextBox.Text;
-            Articulo.Precio = Convert.ToInt32(PreciotextBox.Text);
+            Articulo.Precio = Convert.ToInt32(PrecionumericUpDown.Value);
             Articulo.Existencia = Convert.ToInt32(ExistencianumericUpDown.Value);
-            Articulo.CantidadCtizado = Convert.ToInt32(CantidadCotizadonumericUpDown.Value);
+            Articulo.CantidadCotizado = Convert.ToInt32(CantidadCotizadonumericUpDown.Value);
 
             return Articulo;
 
@@ -51,7 +60,7 @@ namespace RegistroArticulo.UI.Registros
             ArticuloIDnumericUpDown.Value = 0;
             FechaVencimientodateTimePicker.Value = DateTime.Now;
             DescripcionrichTextBox.Clear();
-            PreciotextBox.Clear();
+            PrecionumericUpDown.Value = 0 ;
             ExistencianumericUpDown.Value = 0;
             CantidadCotizadonumericUpDown.Value = 0;
         }
@@ -63,11 +72,12 @@ namespace RegistroArticulo.UI.Registros
                 MessageBox.Show("llena", "y trate de guardar de nuevo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
+            else    
+           
             {
-
                 Articulos Articulo = LLenaClase();
                 bool paso = false;
+
 
                 if (ArticuloIDnumericUpDown.Value == 0)
                 {
@@ -107,9 +117,9 @@ namespace RegistroArticulo.UI.Registros
             {
                 FechaVencimientodateTimePicker.Value = Articulo.FechaVencimiento;
                 DescripcionrichTextBox.Text = Articulo.Descripcion;
-                PreciotextBox.Text = Articulo.Precio.ToString();
+                PrecionumericUpDown.Value = Articulo.Precio;
                 ExistencianumericUpDown.Value = Articulo.Existencia;
-                CantidadCotizadonumericUpDown.Value = Articulo.CantidadCtizado;
+                CantidadCotizadonumericUpDown.Value = Articulo.CantidadCotizado;
                 
             }
             else

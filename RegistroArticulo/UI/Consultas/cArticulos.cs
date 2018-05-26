@@ -47,7 +47,7 @@ namespace RegistroArticulo.UI.Consultas
                     break;
 
                 case 5:
-                    Filtro = x => x.CantidadCtizado.Equals(CriteriotextBox.Text);
+                    Filtro = x => x.CantidadCotizado.Equals(CriteriotextBox.Text);
                     break;
             }
             ConsultadataGridView.DataSource = BLL.ArticulosBLL.GetList(Filtro);

@@ -5,7 +5,7 @@ GO
 CREATE TABLE Articulos
 (
 
-  ArticuloId int primary key identity(1,1),
+  ArticuloId int primary key identity,
   FechaVencimiento datetime,
   Descripcion varchar(max),
   Precio decimal,

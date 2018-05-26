@@ -39,17 +39,18 @@
             this.CantidadCotizadonumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ExistencianumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.FechaVencimientodateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.PreciotextBox = new System.Windows.Forms.TextBox();
             this.DescripcionrichTextBox = new System.Windows.Forms.RichTextBox();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadCotizadonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistencianumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -134,13 +135,6 @@
             this.FechaVencimientodateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.FechaVencimientodateTimePicker.TabIndex = 9;
             // 
-            // PreciotextBox
-            // 
-            this.PreciotextBox.Location = new System.Drawing.Point(152, 194);
-            this.PreciotextBox.Name = "PreciotextBox";
-            this.PreciotextBox.Size = new System.Drawing.Size(200, 20);
-            this.PreciotextBox.TabIndex = 10;
-            // 
             // DescripcionrichTextBox
             // 
             this.DescripcionrichTextBox.Location = new System.Drawing.Point(152, 100);
@@ -205,18 +199,25 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // PrecionumericUpDown
+            // 
+            this.PrecionumericUpDown.Location = new System.Drawing.Point(152, 201);
+            this.PrecionumericUpDown.Name = "PrecionumericUpDown";
+            this.PrecionumericUpDown.Size = new System.Drawing.Size(200, 20);
+            this.PrecionumericUpDown.TabIndex = 16;
+            // 
             // rArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(656, 450);
+            this.Controls.Add(this.PrecionumericUpDown);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.DescripcionrichTextBox);
-            this.Controls.Add(this.PreciotextBox);
             this.Controls.Add(this.FechaVencimientodateTimePicker);
             this.Controls.Add(this.ExistencianumericUpDown);
             this.Controls.Add(this.CantidadCotizadonumericUpDown);
@@ -234,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CantidadCotizadonumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistencianumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,12 +253,12 @@
         private System.Windows.Forms.NumericUpDown CantidadCotizadonumericUpDown;
         private System.Windows.Forms.NumericUpDown ExistencianumericUpDown;
         private System.Windows.Forms.DateTimePicker FechaVencimientodateTimePicker;
-        private System.Windows.Forms.TextBox PreciotextBox;
         private System.Windows.Forms.RichTextBox DescripcionrichTextBox;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.NumericUpDown PrecionumericUpDown;
     }
 }

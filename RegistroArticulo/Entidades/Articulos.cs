@@ -14,7 +14,7 @@ namespace RegistroArticulo.Entidades
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }
         public int Existencia { get; set; }
-        public int CantidadCtizado { get; set; }
+        public int CantidadCotizado { get; set; }
 
         public Articulos()
         {
@@ -23,7 +23,7 @@ namespace RegistroArticulo.Entidades
             Descripcion = string.Empty;
             Precio = 0;
             Existencia = 0;
-            CantidadCtizado = 0;
+            CantidadCotizado = 0;
         }
     }
 }
